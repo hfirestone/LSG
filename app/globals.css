@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #080808;
+  --white: #ffffff;
+  --off-white: #f4f4f2;
+  --grey: #6b6b6b;
+  --light-grey: #e8e8e6;
+  --accent: #080808;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--white);
+  color: var(--black);
+  font-family: var(--font-dm-sans), sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeUp   { animation: fadeUp 0.9s ease both; }
+.animate-fadeUp-1 { animation: fadeUp 0.9s 0.1s ease both; }
+.animate-fadeUp-2 { animation: fadeUp 0.9s 0.2s ease both; }
+.animate-fadeUp-3 { animation: fadeUp 0.9s 0.35s ease both; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay {
+  transition-delay: 0.15s;
+}

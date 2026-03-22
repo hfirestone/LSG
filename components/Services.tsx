@@ -4,33 +4,33 @@ import { useReveal } from "./useReveal";
 const services = [
   {
     num: "01",
-    title: "Contract Negotiation",
-    desc: "We secure the most competitive contracts across the NBA, EuroLeague, ACB, and leagues worldwide. Every deal is negotiated with your long-term career in mind.",
+    title: "NBA Draft Preparation",
+    desc: "We guide you through every step of the draft process — from deciding whether to declare, to pre-draft workouts, combine preparation, and agent meetings.",
   },
   {
     num: "02",
-    title: "Marketing & Brand",
-    desc: "From endorsement deals and shoe contracts to social media strategy and public appearances — we build your brand as carefully as we build your career.",
+    title: "NIL Representation",
+    desc: "Maximize your name, image, and likeness opportunities while in school. We negotiate NIL deals, brand partnerships, and endorsements that fit your personal brand.",
   },
   {
     num: "03",
-    title: "Financial Planning",
-    desc: "Strategic wealth management and tax planning tailored to the unique financial circumstances of professional athletes. We protect what you earn.",
+    title: "Contract Negotiation",
+    desc: "Whether it's an NBA rookie contract, a two-way deal, or a professional contract overseas, we fight to get you the best possible terms.",
   },
   {
     num: "04",
-    title: "Legal Counsel",
-    desc: "Expert legal review of every contract, sponsorship deal, and dispute. You sign nothing without our full confidence.",
+    title: "Transfer Portal Guidance",
+    desc: "Navigating the transfer portal is one of the most important decisions of your college career. We help you evaluate opportunities and make the move that's right for you.",
   },
   {
     num: "05",
-    title: "Career Development",
-    desc: "From training camp placement to film review and league connections — we invest in your development, not just your contract.",
+    title: "Financial Planning",
+    desc: "From your first NIL check to your first professional contract — we connect you with trusted financial advisors who specialize in young athletes.",
   },
   {
     num: "06",
-    title: "Global Network",
-    desc: "Relationships across every major basketball market — NBA, EuroLeague, G League, Asia, Middle East — means more doors open for our clients.",
+    title: "Brand & Marketing",
+    desc: "Building your personal brand early is critical. We help develop your social media presence, media strategy, and public profile from day one.",
   },
 ];
 
@@ -50,8 +50,8 @@ export default function Services() {
               letterSpacing: "-0.02em",
             }}
           >
-            Full-spectrum<br />
-            <span style={{ fontStyle: "italic", color: "var(--grey)" }}>representation.</span>
+            Everything you need<br />
+            <span style={{ fontStyle: "italic", color: "var(--grey)" }}>at every stage.</span>
           </h2>
         </div>
 
@@ -59,7 +59,7 @@ export default function Services() {
           {services.map((s, i) => (
             <div
               key={s.num}
-              className="reveal py-10 px-8 transition-colors duration-300 group cursor-default"
+              className="reveal py-10 px-8 transition-colors duration-300 cursor-default"
               style={{
                 borderTop: "1px solid var(--light-grey)",
                 borderRight: i % 3 !== 2 ? "1px solid var(--light-grey)" : "none",

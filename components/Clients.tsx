@@ -1,7 +1,7 @@
 "use client";
 import { useReveal } from "./useReveal";
 
-const leagues = ["NBA", "EuroLeague", "ACB", "BSL", "LNB", "VTB", "G League", "FIBA Europe Cup"];
+const conferences = ["ACC", "Big Ten", "Big 12", "SEC", "Pac-12", "Big East", "Mountain West", "AAC"];
 
 export default function Clients() {
   const ref = useReveal();
@@ -21,11 +21,11 @@ export default function Clients() {
                 letterSpacing: "-0.02em",
               }}
             >
-              Our clients.<br />
-              <span style={{ fontStyle: "italic", color: "var(--grey)" }}>Their success.</span>
+              Our athletes.<br />
+              <span style={{ fontStyle: "italic", color: "var(--grey)" }}>Their journey.</span>
             </h2>
             <p className="mt-8 text-sm leading-relaxed max-w-sm" style={{ color: "var(--grey)", fontWeight: 300 }}>
-              We represent elite professional basketball players competing at the highest levels across the globe. Player details are available upon request.
+              We represent NCAA basketball players from programs across the country — from freshman standouts to seniors preparing for the draft. All client details are available upon request.
             </p>
             <div className="mt-8" style={{ borderTop: "1px solid var(--light-grey)", paddingTop: "2rem" }}>
               <a
@@ -39,33 +39,40 @@ export default function Clients() {
           </div>
 
           <div className="reveal reveal-delay">
-            {/* League tags */}
-            <p className="text-xs tracking-[0.3em] uppercase mb-6" style={{ color: "var(--grey)" }}>Leagues We Operate In</p>
+            {/* Conference tags */}
+            <p className="text-xs tracking-[0.3em] uppercase mb-6" style={{ color: "var(--grey)" }}>Conferences We Recruit From</p>
             <div className="flex flex-wrap gap-3 mb-12">
-              {leagues.map((l) => (
+              {conferences.map((c) => (
                 <span
-                  key={l}
+                  key={c}
                   className="text-xs tracking-[0.12em] uppercase px-4 py-2 border"
                   style={{ borderColor: "var(--light-grey)", color: "var(--grey)" }}
                 >
-                  {l}
+                  {c}
                 </span>
               ))}
             </div>
 
-            {/* Placeholder roster lines */}
-            <p className="text-xs tracking-[0.3em] uppercase mb-4" style={{ color: "var(--grey)" }}>Current Clients</p>
+            {/* What we look for */}
+            <p className="text-xs tracking-[0.3em] uppercase mb-4" style={{ color: "var(--grey)" }}>What We Look For</p>
             <div className="space-y-0">
-              {Array.from({ length: 8 }).map((_, i) => (
+              {[
+                "High-level NCAA competitors",
+                "NBA Draft prospects",
+                "Transfer portal candidates",
+                "NIL-ready athletes",
+                "Players with pro potential",
+                "Character-first competitors",
+              ].map((item, i) => (
                 <div
                   key={i}
-                  className="flex justify-between items-center py-4 transition-colors duration-200"
+                  className="flex justify-between items-center py-4 transition-colors duration-200 px-2"
                   style={{ borderBottom: "1px solid var(--light-grey)" }}
                   onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.background = "var(--off-white)")}
                   onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.background = "transparent")}
                 >
-                  <span className="text-sm font-medium tracking-wide" style={{ paddingLeft: "0.5rem" }}>Available Upon Request</span>
-                  <span className="text-xs tracking-widest uppercase" style={{ color: "var(--grey)" }}>Professional</span>
+                  <span className="text-sm font-medium tracking-wide">{item}</span>
+                  <span className="text-xs" style={{ color: "var(--light-grey)" }}>→</span>
                 </div>
               ))}
             </div>

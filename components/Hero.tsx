@@ -22,7 +22,6 @@ export default function Hero() {
         LSG
       </div>
 
-      {/* Thin top rule */}
       <div className="absolute top-0 left-0 right-0 h-px" style={{ background: "var(--light-grey)" }} />
 
       <div className="relative z-10 max-w-5xl">
@@ -40,21 +39,21 @@ export default function Hero() {
             color: "var(--black)",
           }}
         >
-          Elite Basketball<br />
-          <span style={{ fontStyle: "italic", color: "var(--grey)" }}>Representation.</span>
+          Your Game.<br />
+          <span style={{ fontStyle: "italic", color: "var(--grey)" }}>Your Future.</span>
         </h1>
 
         <div className="mt-12 flex flex-col md:flex-row gap-6 md:items-end animate-fadeUp-2">
           <p className="max-w-sm text-sm leading-relaxed" style={{ color: "var(--grey)", fontWeight: 300 }}>
-            A boutique sports management group dedicated to maximizing the careers and futures of elite professional basketball players.
+            We represent NCAA basketball players preparing for the next level — guiding you through the draft process, NIL opportunities, and your professional career.
           </p>
           <div className="flex gap-4 md:ml-16">
             <a
-              href="#clients"
+              href="#about"
               className="text-xs tracking-[0.18em] uppercase px-8 py-4 transition-all duration-200 bg-black text-white hover:bg-gray-800"
               style={{ fontWeight: 500 }}
             >
-              Our Roster
+              Learn More
             </a>
             <a
               href="#contact"
@@ -67,7 +66,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Bottom rule */}
       <div className="absolute bottom-0 left-0 right-0 h-px" style={{ background: "var(--light-grey)" }} />
     </section>
   );

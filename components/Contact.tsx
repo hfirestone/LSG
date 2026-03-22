@@ -20,11 +20,11 @@ export default function Contact() {
                 color: "var(--white)",
               }}
             >
-              Let&apos;s build your<br />
-              <span style={{ fontStyle: "italic", color: "rgba(255,255,255,0.5)" }}>career together.</span>
+              Ready to take<br />
+              <span style={{ fontStyle: "italic", color: "rgba(255,255,255,0.5)" }}>the next step?</span>
             </h2>
             <p className="mt-8 text-sm leading-relaxed max-w-sm" style={{ color: "rgba(255,255,255,0.45)", fontWeight: 300 }}>
-              Whether you&apos;re looking for representation or want to learn more about what LSG can do for your career, we&apos;d love to hear from you.
+              Whether you&apos;re a current NCAA athlete exploring your options, a parent with questions, or a coach looking to connect — we&apos;d love to hear from you.
             </p>
           </div>
 
@@ -41,13 +41,18 @@ export default function Contact() {
             </div>
 
             <div style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "2rem" }}>
-              <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: "rgba(255,255,255,0.35)" }}>Based In</p>
-              <p className="text-lg font-light" style={{ color: "var(--white)" }}>United States</p>
+              <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: "rgba(255,255,255,0.35)" }}>Who We Work With</p>
+              <p className="text-lg font-light" style={{ color: "var(--white)" }}>NCAA Athletes & Families</p>
+            </div>
+
+            <div style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "2rem" }}>
+              <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: "rgba(255,255,255,0.35)" }}>Focus</p>
+              <p className="text-lg font-light" style={{ color: "var(--white)" }}>NBA Draft · NIL · Pro Contracts</p>
             </div>
 
             <div>
-              <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: "rgba(255,255,255,0.35)" }}>Markets</p>
-              <p className="text-lg font-light" style={{ color: "var(--white)" }}>NBA · Europe · Global</p>
+              <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: "rgba(255,255,255,0.35)" }}>Based In</p>
+              <p className="text-lg font-light" style={{ color: "var(--white)" }}>United States</p>
             </div>
           </div>
         </div>

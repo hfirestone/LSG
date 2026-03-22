@@ -19,27 +19,27 @@ export default function About() {
                 letterSpacing: "-0.02em",
               }}
             >
-              Built on trust.<br />
-              <span style={{ fontStyle: "italic", color: "var(--grey)" }}>Driven by results.</span>
+              From college courts<br />
+              <span style={{ fontStyle: "italic", color: "var(--grey)" }}>to the pros.</span>
             </h2>
           </div>
 
           <div className="reveal reveal-delay space-y-6">
             <p className="leading-relaxed text-base" style={{ color: "var(--grey)", fontWeight: 300 }}>
-              Lerner Sports Group was founded with a single mission: to provide professional basketball players with the highest level of personalized representation. We are a boutique agency — which means every client receives direct, dedicated attention from day one.
+              Lerner Sports Group specializes in representing NCAA basketball players through every stage of their transition to professional basketball. We understand the unique pressures and opportunities that come with being a college athlete — and we're here to help you navigate them.
             </p>
             <p className="leading-relaxed text-base" style={{ color: "var(--grey)", fontWeight: 300 }}>
-              We operate across the NBA, EuroLeague, and top leagues worldwide, leveraging deep relationships with clubs, coaches, and general managers to place our clients in the right environments to succeed — on and off the court.
+              From maximizing your NIL potential while in school, to preparing for the NBA Draft, to securing your first professional contract — we provide the guidance, relationships, and expertise to help you make the right decisions at every step.
             </p>
             <p className="leading-relaxed text-base" style={{ color: "var(--grey)", fontWeight: 300 }}>
-              Our approach is simple: know every client personally, fight for them relentlessly, and build careers that last.
+              Our approach is personal. We take on a select number of clients so that every athlete gets our full attention — not a junior agent, not an intern. You.
             </p>
             <div className="pt-4" style={{ borderTop: "1px solid var(--light-grey)" }}>
               <a href="#contact"
                 className="text-xs tracking-[0.18em] uppercase inline-flex items-center gap-3 transition-colors duration-200 hover:opacity-60"
                 style={{ fontWeight: 500 }}
               >
-                Work with us <span>→</span>
+                Start the conversation <span>→</span>
               </a>
             </div>
           </div>

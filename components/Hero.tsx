@@ -26,7 +26,7 @@ export default function Hero() {
         </h1>
         <div className="mt-12 flex flex-col md:flex-row gap-6 md:items-end animate-fadeUp-2">
           <p className="max-w-sm text-sm leading-relaxed" style={{ color: "rgba(255,255,255,0.5)", fontWeight: 300 }}>
-            We represent NCAA basketball players preparing for the next level — guiding you through the draft process, NIL opportunities, and your professional career.
+            We represent NCAA basketball players throughout their journey — guiding you through the transfer portal, NIL opportunities, and your professional career.
           </p>
           <div className="flex gap-4 md:ml-16">
             <a href="#about" className="text-xs tracking-[0.18em] uppercase px-8 py-4 transition-all duration-200" style={{ background: "var(--white)", color: "var(--black)", fontWeight: 500 }}>

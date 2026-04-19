@@ -22,7 +22,7 @@ export default function Contact() {
           <div className="reveal reveal-delay space-y-8">
             <div style={{ borderBottom: "1px solid var(--light-grey)", paddingBottom: "2rem" }}>
               <p className="text-xs tracking-[0.3em] uppercase mb-3" style={{ color: "var(--grey)" }}>Email</p>
-              <a href="mailto:info@lernersportsgroup.com" className="text-lg font-light transition-opacity duration-200 hover:opacity-60" style={{ color: "var(--black)" }}>
+              <a href="mailto:lernersportsgroup@gmail.com" className="text-lg font-light transition-opacity duration-200 hover:opacity-60" style={{ color: "var(--black)" }}>
                 info@lernersportsgroup.com
               </a>
             </div>

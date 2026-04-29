@@ -1,7 +1,7 @@
 "use client";
 import { useReveal } from "./useReveal";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const athletes = [
   {
@@ -29,6 +29,30 @@ const athletes = [
 export default function Clients() {
   const ref = useReveal();
   const [active, setActive] = useState(0);
+  const [progress, setProgress] = useState(0);
+
+  // Auto-advance every 10 seconds
+  useEffect(() => {
+    setProgress(0);
+    const interval = setInterval(() => {
+      setProgress((p) => {
+        if (p >= 100) {
+          setActive((a) => (a + 1) % athletes.length);
+          return 0;
+        }
+        return p + 1;
+      });
+    }, 100); // increments every 100ms → 100 steps × 100ms = 10s
+
+    return () => clearInterval(interval);
+  }, [active]);
+
+  // Manual click resets the timer
+  const handleClick = (i: number) => {
+    setActive(i);
+    setProgress(0);
+  };
+
   const athlete = athletes[active];
 
   return (
@@ -44,22 +68,29 @@ export default function Clients() {
           </h2>
         </div>
 
-        {/* Carousel tabs */}
+        {/* Carousel tabs with progress bar */}
         <div className="reveal flex gap-0 mb-0" style={{ borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
           {athletes.map((a, i) => (
             <button
               key={a.name}
-              onClick={() => setActive(i)}
-              className="px-8 py-4 text-sm tracking-wide transition-all duration-200 text-left"
+              onClick={() => handleClick(i)}
+              className="relative px-8 py-4 text-sm tracking-wide transition-all duration-200 text-left overflow-hidden"
               style={{
                 background: active === i ? "rgba(255,255,255,0.06)" : "transparent",
                 color: active === i ? "var(--white)" : "rgba(255,255,255,0.35)",
-                borderBottom: active === i ? "2px solid var(--white)" : "2px solid transparent",
                 fontWeight: active === i ? 500 : 400,
+                borderBottom: active === i ? "2px solid transparent" : "2px solid transparent",
                 marginBottom: "-1px",
               }}
             >
               {a.name}
+              {/* Progress bar at bottom of active tab */}
+              {active === i && (
+                <div
+                  className="absolute bottom-0 left-0 h-0.5 transition-none"
+                  style={{ width: `${progress}%`, background: "var(--white)" }}
+                />
+              )}
             </button>
           ))}
         </div>
@@ -127,12 +158,12 @@ export default function Clients() {
           </div>
         </div>
 
-        {/* Carousel dots */}
+        {/* Dot indicators */}
         <div className="flex gap-3 mt-6 justify-center">
           {athletes.map((_, i) => (
             <button
               key={i}
-              onClick={() => setActive(i)}
+              onClick={() => handleClick(i)}
               className="rounded-full transition-all duration-200"
               style={{
                 width: active === i ? "24px" : "8px",

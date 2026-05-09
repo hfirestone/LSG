@@ -16,7 +16,7 @@ const athletes = [
   },
   {
     name: "Will Sydnor",
-    position: "Guard · Rutgers",
+    position: "Forward · Rutgers",
     achievements: ["MAAC Rookie of the Year", "All-MAAC Second Team"],
     transfer: "Manhattan (MAAC) → Rutgers (Big Ten)",
     service: "Transfer Portal · NIL",
